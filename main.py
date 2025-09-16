@@ -57,7 +57,7 @@ class YOLOMultitask(nn.Module):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = YOLOMultitask(num_classes=3).to(device)
 model.load_state_dict(torch.load(
-    r"E:\Ultrsound project\multitask\yolo_multitask_busi1.pth",
+    r"yolo_multitask_busi1.pth",
     map_location=device
 ))
 model.eval()
