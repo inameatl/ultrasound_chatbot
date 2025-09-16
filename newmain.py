@@ -50,7 +50,7 @@ class YOLOMultitask(nn.Module):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = YOLOMultitask(num_classes=3).to(device)
 model.load_state_dict(torch.load(
-    r"E:\Ultrsound project\multitask\yolo_multitask_busi1.pth",
+    r"yolo_multitask_busi1.pth",
     map_location=device
 ))
 model.eval()
@@ -201,3 +201,4 @@ if uploaded_file:
         st.session_state.messages.append({"role":"assistant","content":reply})
 
     st.success("✅ Self-learning session active. Chat and optionally segment for feedback.")
+
